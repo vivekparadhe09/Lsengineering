@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Services - L&S Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('images/recruitment1.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            margin-top: auto;
+        }
+        .glass-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1E40AF;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1E3A8A;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
+        <div class="flex items-center space-x-2">
+            <img src="images/LS_LOGO1.png" alt="L&S Logo" class="h-10 w-10">
+            <h1 class="text-2xl font-bold">L&S Engineering Services</h1>
+        </div>
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+            <li><a href="services.html" class="hover:text-blue-500">Services</a></li>
+            <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="p-8 text-center mt-16">
+        <div class="glass-box max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-black mb-6">Recruitment Services</h2>
+            <p class="text-lg">L&S Engineering Services specializes in connecting top-tier talent with industry-leading companies. We provide expert workforce placement for offshore, onshore, and civil projects, ensuring our clients have the right professionals to drive success.</p>
+        </div>
+
+        <div class="glass-box mt-6 max-w-4xl mx-auto">
+            <h3 class="text-2xl font-semibold">Our Recruitment Expertise</h3>
+            <ul class="list-disc text-left mx-auto mt-4 space-y-2 max-w-lg">
+                <li>Specialized recruitment for engineering and technical roles</li>
+                <li>End-to-end hiring solutions tailored to industry needs</li>
+                <li>Skilled workforce placement for offshore & onshore projects</li>
+                <li>Flexible staffing options for long-term and short-term contracts</li>
+                <li>Seamless onboarding and HR support</li>
+            </ul>
+        </div>
+
+        <a href="services.html" class="btn">Back to Services</a>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
