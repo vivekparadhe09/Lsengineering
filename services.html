@@ -20,28 +20,31 @@
             margin-top: auto;
         }
         .glass-box {
-            background: rgba(255, 255, 255, 0.7); /* White transparent effect */
+            background: rgba(255, 255, 255, 0.8);
             padding: 1.5rem;
             border-radius: 10px;
-            backdrop-filter: blur(8px); /* Frosted glass effect */
+            backdrop-filter: blur(8px);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .glass-box:hover {
             transform: scale(1.05);
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         }
-        .small-glass-box {
-            max-width: 300px; /* Makes the background box smaller */
-            margin: auto;
+        .service-box {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .service-box:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body class="text-gray-900">
 
-     <!-- Navbar with Logo -->
+    <!-- Navbar with Logo -->
     <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
         <div class="flex items-center space-x-2">
-            <img src="images/LS LOGO1.png" alt="L&S Logo" class="h-10 w-10">  <!-- Logo Added -->
+            <img src="images/LS_LOGO1.png" alt="L&S Logo" class="h-10 w-10">
             <h1 class="text-2xl font-bold">L&S Engineering Services</h1>
         </div>
         <ul class="flex space-x-4">
@@ -53,18 +56,12 @@
 
     <!-- Services Section -->
     <main class="p-8 text-center mt-16">
-        <div class="glass-box small-glass-box">
+        <div class="glass-box max-w-lg mx-auto">
             <h2 class="text-3xl font-bold text-black mb-6">Our Services</h2>
         </div>
-        <br>
 
-        <!-- Small Intro Box -->
-        <!-- div class="glass-box small-glass-box transition duration-300 transform hover:scale-105">
-            <p class="text-lg font-semibold text-gray-900">Reliable. Innovative. Engineered for Success.</p>
-        </div>
-
-        <!-- New Paragraph Section -->
-        <div class="glass-box mt-6 max-w-3xl mx-auto text-gray-900 transition duration-300 transform hover:scale-105">
+        <!-- Intro Section -->
+        <div class="glass-box mt-6 max-w-3xl mx-auto text-gray-900">
             <p class="text-lg">
                 At <span class="font-bold text-blue-600">L&S Engineering Services</span>, we provide comprehensive 
                 <span class="font-semibold">EPC (Engineering, Procurement, and Construction)</span> solutions, ensuring seamless project execution for offshore, onshore, and civil sectors. 
@@ -73,29 +70,35 @@
             </p>
         </div>
 
-        <!-- Services Grid -->
+        <!-- Services Grid with Hyperlinks -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             
-            <!-- Service 1 -->
-            <div class="glass-box transition duration-300 transform hover:scale-105">
-                <img src="images/epc.jpg" alt="EPC Contracting" class="w-full h-48 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">EPC Contracting</h3>
-                <p class="mt-2">Comprehensive engineering, procurement, and construction solutions.</p>
-            </div>
-            
-            <!-- Service 2 -->
-            <div class="glass-box transition duration-300 transform hover:scale-105">
-                <img src="images/recruitment.jpg" alt="Recruitment Services" class="w-full h-48 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Recruitment Services</h3>
-                <p class="mt-2">Connecting top talent with leading companies.</p>
-            </div>
-            
-            <!-- Service 3 -->
-            <div class="glass-box transition duration-300 transform hover:scale-105">
-                <img src="images/project-management.jpg" alt="Project Management" class="w-full h-48 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">Project Management</h3>
-                <p class="mt-2">Ensuring seamless execution of projects.</p>
-            </div>
+            <!-- EPC Contracting (Clickable) -->
+            <a href="epc-contracting.html" class="service-box">
+                <div class="glass-box">
+                    <img src="images/epc.jpg" alt="EPC Contracting" class="w-full h-48 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">EPC Contracting</h3>
+                    <p class="mt-2">Comprehensive engineering, procurement, and construction solutions.</p>
+                </div>
+            </a>
+
+            <!-- Recruitment Services (Clickable) -->
+            <a href="recruitment-services.html" class="service-box">
+                <div class="glass-box">
+                    <img src="images/recruitment.jpg" alt="Recruitment Services" class="w-full h-48 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Recruitment Services</h3>
+                    <p class="mt-2">Connecting top talent with leading companies.</p>
+                </div>
+            </a>
+
+            <!-- Project Management (Clickable) -->
+            <a href="project-management.html" class="service-box">
+                <div class="glass-box">
+                    <img src="images/project-management.jpg" alt="Project Management" class="w-full h-48 object-cover rounded-md">
+                    <h3 class="text-xl font-semibold mt-4">Project Management</h3>
+                    <p class="mt-2">Ensuring seamless execution of projects.</p>
+                </div>
+            </a>
         </div>
     </main>
 
