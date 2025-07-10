@@ -1,110 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - L&S Engineering</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: url('images/Services.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        main {
-            flex: 1;
-        }
-        footer {
-            margin-top: auto;
-        }
-        .glass-box {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 1.5rem;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .glass-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .service-box {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .service-box:hover {
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - L&S Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background: url('images/Services.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass-box {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
-<body class="text-gray-900">
+<body class="text-gray-900 font-sans">
 
-    <!-- Navbar with Logo -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
-        <div class="flex items-center space-x-2">
-            <img src="images/LS LOGO1.png" alt="L&S Logo" class="h-10 w-10">
-            <h1 class="text-2xl font-bold">L&S Engineering Services</h1>
-        </div>
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-            <li><a href="services.html" class="hover:text-blue-500">Services</a></li>
-            <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Services Section -->
-    <main class="p-8 text-center mt-16">
-        <div class="glass-box max-w-lg mx-auto">
-            <h2 class="text-3xl font-bold text-black mb-6">Our Services</h2>
+  <!-- Navbar -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="images/LS LOGO1.png" alt="L&S Logo" class="h-16 w-16 object-contain" />
+          <span class="text-2xl font-bold">L&S Engineering Services</span>
         </div>
 
-        <!-- Intro Section -->
-        <div class="glass-box mt-6 max-w-3xl mx-auto text-gray-900">
-            <p class="text-lg">
-                At <span class="font-bold text-blue-600">L&S Engineering Services</span>, we provide comprehensive 
-                <span class="font-semibold">EPC (Engineering, Procurement, and Construction)</span> solutions, ensuring seamless project execution for offshore, onshore, and civil sectors. 
-                Alongside our engineering expertise, we offer specialized workforce recruitment, connecting skilled professionals with the right opportunities. 
-                Whether it's project development or talent acquisition, we deliver <span class="font-bold">quality and efficiency</span> at every stage.
-            </p>
+        <!-- Menu for large screens -->
+        <div class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+          <a href="services.html" class="text-blue-600 font-semibold border-b-2 border-blue-600">Services</a>
+          <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
         </div>
 
-        <!-- Services Grid with Hyperlinks -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            
-            <!-- EPC Contracting (Clickable) -->
-            <a href="epc-contracting.html" class="service-box">
-                <div class="glass-box">
-                    <img src="images/epc.jpg" alt="EPC Contracting" class="w-full h-48 object-cover rounded-md">
-                    <h3 class="text-xl font-semibold mt-4">EPC Contracting</h3>
-                    <p class="mt-2">Comprehensive engineering, procurement, and construction solutions.</p>
-                </div>
-            </a>
-
-            <!-- Recruitment Services (Clickable) -->
-            <a href="recruitment-services.html" class="service-box">
-                <div class="glass-box">
-                    <img src="images/recruitment.jpg" alt="Recruitment Services" class="w-full h-48 object-cover rounded-md">
-                    <h3 class="text-xl font-semibold mt-4">Recruitment Services</h3>
-                    <p class="mt-2">Connecting top talent with leading companies.</p>
-                </div>
-            </a>
-
-            <!-- Project Management (Clickable) -->
-            <a href="project-management.html" class="service-box">
-                <div class="glass-box">
-                    <img src="images/project-management.jpg" alt="Project Management" class="w-full h-48 object-cover rounded-md">
-                    <h3 class="text-xl font-semibold mt-4">Project Management</h3>
-                    <p class="mt-2">Ensuring seamless execution of projects.</p>
-                </div>
-            </a>
+        <!-- Mobile menu toggle -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-800 focus:outline-none text-2xl">&#9776;</button>
         </div>
-    </main>
+      </div>
+    </div>
 
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
-    </footer>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/90 text-center p-4 space-y-3">
+      <a href="index.html" class="block hover:text-blue-600">Home</a>
+      <a href="services.html" class="block text-blue-600 font-semibold">Services</a>
+      <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="glass-box text-center max-w-2xl mx-auto mb-10">
+      <h1 class="text-4xl font-bold mb-4">Our Services</h1>
+      <p class="text-lg text-gray-800">
+        Discover how <span class="text-blue-600 font-semibold">L&S Engineering Services</span> supports engineering excellence, streamlined project delivery, and top-tier workforce solutions.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- EPC Contracting -->
+      <a href="epc-contracting.html" class="glass-box service-box hover:shadow-xl">
+        <img src="images/epc.jpg" alt="EPC Contracting" class="w-full h-44 object-cover rounded-md mb-4" />
+        <h3 class="text-xl font-semibold">EPC Contracting</h3>
+        <p class="text-sm text-gray-700 mt-2">Complete engineering, procurement & construction solutions for your projects.</p>
+      </a>
+
+      <!-- Recruitment Services -->
+      <a href="recruitment-services.html" class="glass-box service-box hover:shadow-xl">
+        <img src="images/recruitment.jpg" alt="Recruitment Services" class="w-full h-44 object-cover rounded-md mb-4" />
+        <h3 class="text-xl font-semibold">Recruitment Services</h3>
+        <p class="text-sm text-gray-700 mt-2">We bridge the gap between great companies and skilled professionals.</p>
+      </a>
+
+      <!-- Project Management -->
+      <a href="project-management.html" class="glass-box service-box hover:shadow-xl">
+        <img src="images/project-management.jpg" alt="Project Management" class="w-full h-44 object-cover rounded-md mb-4" />
+        <h3 class="text-xl font-semibold">Project Management</h3>
+        <p class="text-sm text-gray-700 mt-2">Ensuring seamless execution, monitoring and control of projects from start to finish.</p>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS: Mobile Menu Toggle -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
