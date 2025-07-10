@@ -1,85 +1,86 @@
+<!-- ✅ EPC Contracting Page -->
+<!-- File: epc-contracting.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPC Contracting - L&S Engineering</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: url('images/epc1.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        main {
-            flex: 1;
-        }
-        footer {
-            margin-top: auto;
-        }
-        .glass-box {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .glass-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #1E40AF;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #1E3A8A;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPC Contracting - L&S Engineering</title>
+  <meta name="description" content="L&S Engineering offers expert EPC solutions for onshore, offshore, and civil infrastructure." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('images/epc1.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass-box {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
-<body class="text-gray-900">
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
-        <div class="flex items-center space-x-2">
-            <img src="images/LS LOGO1.png" alt="L&S Logo" class="h-10 w-10">
-            <h1 class="text-2xl font-bold">L&S Engineering Services</h1>
+<body class="text-gray-900 font-sans">
+  <nav class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-3">
+          <img src="images/LS_LOGO1.png" alt="L&S Logo" class="h-16 w-16 object-contain" />
+          <span class="text-2xl font-bold">L&S Engineering Services</span>
         </div>
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-            <li><a href="services.html" class="hover:text-blue-500">Services</a></li>
-            <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main class="p-8 text-center mt-16">
-        <div class="glass-box max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-black mb-6">EPC Contracting</h2>
-            <p class="text-lg">L&S Engineering Services provides end-to-end Engineering, Procurement, and Construction (EPC) solutions for offshore, onshore, and civil infrastructure projects. Our expertise ensures seamless execution, cost-efficiency, and adherence to the highest quality standards.</p>
+        <div class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+          <a href="services.html" class="hover:text-blue-600 transition">Services</a>
+          <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
         </div>
-
-        <div class="glass-box mt-6 max-w-4xl mx-auto">
-            <h3 class="text-2xl font-semibold">Our EPC Services</h3>
-            <ul class="list-disc text-left mx-auto mt-4 space-y-2 max-w-lg">
-                <li>Engineering design and feasibility studies</li>
-                <li>Procurement of high-quality materials and equipment</li>
-                <li>Construction management and execution</li>
-                <li>Quality control and safety compliance</li>
-                <li>Project commissioning and handover</li>
-            </ul>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-800 text-2xl">&#9776;</button>
         </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white/90 text-center p-4 space-y-3">
+      <a href="index.html" class="block hover:text-blue-600">Home</a>
+      <a href="services.html" class="block hover:text-blue-600">Services</a>
+      <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+    </div>
+  </nav>
 
-        <a href="services.html" class="btn">Back to Services</a>
-    </main>
+  <main class="pt-32 pb-16 px-4 md:px-8 max-w-5xl mx-auto text-center">
+    <div class="glass-box mb-8 shadow-md">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">EPC Contracting</h2>
+      <p class="text-lg text-gray-800">
+        L&S Engineering Services delivers complete EPC (Engineering, Procurement, and Construction) solutions. We specialize in offshore, onshore, and civil infrastructure projects. Our expertise ensures seamless execution, cost-efficiency, and adherence to the highest quality standards.
+      </p>
+    </div>
+    <div class="glass-box shadow-md">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our EPC Services</h3>
+      <ul class="list-disc text-left mx-auto space-y-2 text-gray-800 max-w-xl pl-5">
+        <li>Engineering design and feasibility studies</li>
+        <li>Procurement of high-quality materials and equipment</li>
+        <li>Construction management and execution</li>
+        <li>Quality control and safety compliance</li>
+        <li>Project commissioning and handover</li>
+      </ul>
+    </div>
+    <a href="services.html" class="inline-block mt-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+      ← Back to Services
+    </a>
+  </main>
 
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
-    </footer>
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
