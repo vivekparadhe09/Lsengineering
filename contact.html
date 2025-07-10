@@ -62,25 +62,44 @@
     </div>
   </nav>
 
-  <!-- Contact Form Section -->
-  <main class="pt-32 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
-    <div class="glass-box shadow-lg">
-      <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-700">Get in Touch</h1>
-      <p class="text-center mb-8 text-gray-700">
-        Have a project in mind or need expert engineering guidance? Reach out to us.
-      </p>
+  <!-- Contact Section -->
+  <main class="pt-32 pb-16 px-4 md:px-8 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Contact Info -->
+      <div class="glass-box text-gray-800">
+        <h2 class="text-3xl font-bold mb-4 text-blue-700">Contact Details</h2>
+        <p class="mb-4">
+          <strong>Address:</strong><br>
+          B001, Shree Apartment,<br>
+          Navghar Ali, Ghansoli Goan,<br>
+          Navi Mumbai – 400701
+        </p>
+        <p class="mb-4">
+          <strong>Phone:</strong><br>
+          <a href="tel:8454092911" class="text-blue-600 hover:underline">8454092911</a><br>
+          <a href="tel:9867795742" class="text-blue-600 hover:underline">9867795742</a>
+        </p>
+        <p>
+          <strong>Email:</strong><br>
+          <a href="mailto:info.lsengineeringservices@gmail.com" class="text-blue-600 hover:underline">info.lsengineeringservices@gmail.com</a>
+        </p>
+      </div>
 
-      <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-6">
-          <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <input type="text" name="subject" placeholder="Subject" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <textarea name="message" rows="5" placeholder="Your Message..." required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-          Send Message
-        </button>
-      </form>
+      <!-- Contact Form -->
+      <div class="glass-box shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-blue-700 text-center">Send a Message</h2>
+        <form action="https://formspree.io/f/moqgdyga" method="POST" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <input type="text" name="subject" placeholder="Subject" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <textarea name="message" rows="5" placeholder="Your Message..." required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
   </main>
 
@@ -89,7 +108,7 @@
     <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
   </footer>
 
-  <!-- Mobile Menu Toggle JS -->
+  <!-- JS for Mobile Menu -->
   <script>
     const toggleBtn = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
