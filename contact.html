@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - L&S Engineering Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background: url('images/Contact.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        .contact-box {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - L&S Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background: url('images/contact-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass-box {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
-<body class="text-gray-900">
-    
-    <!-- Navbar with Logo -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
-        <div class="flex items-center space-x-2">
-            <img src="images/LS LOGO1.png" alt="L&S Logo" class="h-10 w-10">  <!-- Logo Added -->
-            <h1 class="text-2xl font-bold">L&S Engineering Services</h1>
+<body class="text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-3">
+          <img src="images/LS_LOGO1.png" alt="L&S Logo" class="h-16 w-16 object-contain" />
+          <span class="text-2xl font-bold">L&S Engineering Services</span>
         </div>
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-            <li><a href="services.html" class="hover:text-blue-500">Services</a></li>
-            <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contact Section -->
-    <main class="flex justify-center items-center min-h-screen mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl p-8 transition duration-300 transform hover:scale-105">
-
-            
-            <!-- Contact Info -->
- 
-            <div class="contact-box">
-
-                <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
-                <p class="text-gray-700"><strong>Address:</strong> 1234 Engineering Street, Tech City, TX 75000</p>
-                <p class="text-gray-700 mt-2"><strong>Phone:</strong> +1 (234) 567-8900</p>
-                <p class="text-gray-700 mt-2"><strong>Email:</strong> info@lsengineeringservices.com</p>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="contact-box">
-                <h2 class="text-2xl font-bold text-center mb-6">Get in Touch</h2>
-                <form>
-                    <label class="block mb-2 font-semibold">Name</label>
-                    <input type="text" class="w-full p-2 border rounded-md mb-4" placeholder="Enter your name">
-
-                    <label class="block mb-2 font-semibold">Email</label>
-                    <input type="email" class="w-full p-2 border rounded-md mb-4" placeholder="Enter your email">
-
-                    <label class="block mb-2 font-semibold">Message</label>
-                    <textarea class="w-full p-2 border rounded-md mb-4" rows="4" placeholder="Write your message"></textarea>
-
-                    <button type="submit" class="bg-blue-600 text-white p-2 rounded-md w-full hover:bg-blue-700">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-
+        <div class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+          <a href="services.html" class="hover:text-blue-600 transition">Services</a>
+          <a href="contact.html" class="text-blue-600 font-semibold border-b-2 border-blue-600">Contact</a>
         </div>
-    </main>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-800 text-2xl">&#9776;</button>
+        </div>
+      </div>
+    </div>
 
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
-    </footer>
+    <div id="mobile-menu" class="hidden md:hidden bg-white/90 text-center p-4 space-y-3">
+      <a href="index.html" class="block hover:text-blue-600">Home</a>
+      <a href="services.html" class="block hover:text-blue-600">Services</a>
+      <a href="contact.html" class="block text-blue-600 font-semibold">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Contact Form Section -->
+  <main class="pt-32 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
+    <div class="glass-box shadow-lg">
+      <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-700">Get in Touch</h1>
+      <p class="text-center mb-8 text-gray-700">
+        Have a project in mind or need expert engineering guidance? Reach out to us.
+      </p>
+
+      <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <textarea name="message" rows="5" placeholder="Your Message..." required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Mobile Menu Toggle JS -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
