@@ -23,6 +23,19 @@
       background: url('images/background.jpg') no-repeat center center fixed;
       background-size: cover;
     }
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .animate-logo {
+      animation: fadeInScale 1s ease-out forwards;
+    }
   </style>
 </head>
 <body class="text-gray-900 font-sans">
@@ -65,10 +78,11 @@
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent z-0"></div>
 
     <div class="relative z-10 text-center bg-black/60 p-8 rounded-lg shadow-xl max-w-xl mx-4">
-      <!-- Logo inside white rounded background -->
-      <div class="bg-white p-2 rounded-lg inline-block shadow-md mb-4">
+      <!-- Logo Animation -->
+      <div class="bg-white p-2 rounded-lg inline-block shadow-md mb-4 animate-logo">
         <img src="images/LS_LOGO1.png" alt="L&S Logo" class="mx-auto w-28" />
       </div>
+
       <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Reliable. Innovative. Engineered for Success.</h1>
       <p class="mt-4 text-lg">Empowering businesses with expert consulting and EPC solutions.</p>
       <a href="services.html" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300">Explore Services</a>
