@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Services - L&S Engineering</title>
+  <meta name="description" content="Explore services by L&S Engineering Services – including EPC contracting, skilled workforce recruitment, and expert project management." />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -29,27 +30,20 @@
   <nav class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <!-- Logo -->
         <div class="flex items-center space-x-3">
           <img src="images/LS_LOGO1.png" alt="L&S Logo" class="h-16 w-16 object-contain" />
           <span class="text-2xl font-bold">L&S Engineering Services</span>
         </div>
-
-        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6 font-medium">
           <a href="index.html" class="hover:text-blue-600 transition">Home</a>
           <a href="services.html" class="text-blue-600 font-semibold border-b-2 border-blue-600">Services</a>
           <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
         </div>
-
-        <!-- Mobile Menu Toggle -->
         <div class="md:hidden">
           <button id="menu-toggle" class="text-gray-800 focus:outline-none text-2xl">&#9776;</button>
         </div>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white/90 text-center p-4 space-y-3">
       <a href="index.html" class="block hover:text-blue-600">Home</a>
       <a href="services.html" class="block text-blue-600 font-semibold">Services</a>
@@ -59,7 +53,6 @@
 
   <!-- Main Content -->
   <main class="pt-32 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
-    <!-- Header -->
     <div class="glass-box text-center max-w-2xl mx-auto mb-10">
       <h1 class="text-4xl font-bold mb-4">Our Services</h1>
       <p class="text-lg text-gray-800">
@@ -67,28 +60,45 @@
       </p>
     </div>
 
-    <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- EPC Contracting -->
-      <a href="epc-contracting.html" class="glass-box hover:shadow-xl">
-        <img src="images/epc.jpg" alt="EPC Contracting" class="w-full h-44 object-cover rounded-md mb-4" />
+      <article class="glass-box hover:shadow-xl">
+        <img src="images/epc.jpg" alt="EPC Contracting - Turnkey project solutions" class="w-full h-44 object-cover rounded-md mb-4" />
         <h3 class="text-xl font-semibold">EPC Contracting</h3>
-        <p class="text-sm text-gray-700 mt-2">Complete engineering, procurement & construction solutions for your projects.</p>
-      </a>
+        <ul class="text-sm text-gray-600 list-disc list-inside mt-2">
+          <li>Turnkey EPC delivery</li>
+          <li>Procurement and logistics</li>
+          <li>Site management and commissioning</li>
+        </ul>
+        <a href="epc-contracting.html" class="text-blue-600 text-sm font-semibold mt-3 inline-block hover:underline">Learn More →</a>
+      </article>
 
-      <!-- Recruitment Services -->
-      <a href="recruitment-services.html" class="glass-box hover:shadow-xl">
-        <img src="images/recruitment.jpg" alt="Recruitment Services" class="w-full h-44 object-cover rounded-md mb-4" />
+      <article class="glass-box hover:shadow-xl">
+        <img src="images/recruitment.jpg" alt="Recruitment Services - Talent sourcing" class="w-full h-44 object-cover rounded-md mb-4" />
         <h3 class="text-xl font-semibold">Recruitment Services</h3>
-        <p class="text-sm text-gray-700 mt-2">We bridge the gap between great companies and skilled professionals.</p>
-      </a>
+        <ul class="text-sm text-gray-600 list-disc list-inside mt-2">
+          <li>Offshore & onshore roles</li>
+          <li>Industry-certified professionals</li>
+          <li>Fast, reliable placements</li>
+        </ul>
+        <a href="recruitment-services.html" class="text-blue-600 text-sm font-semibold mt-3 inline-block hover:underline">Learn More →</a>
+      </article>
 
-      <!-- Project Management -->
-      <a href="project-management.html" class="glass-box hover:shadow-xl">
-        <img src="images/project-management.jpg" alt="Project Management" class="w-full h-44 object-cover rounded-md mb-4" />
+      <article class="glass-box hover:shadow-xl">
+        <img src="images/project-management.jpg" alt="Project Management - Oversight & execution" class="w-full h-44 object-cover rounded-md mb-4" />
         <h3 class="text-xl font-semibold">Project Management</h3>
-        <p class="text-sm text-gray-700 mt-2">Ensuring seamless execution, monitoring and control of projects from start to finish.</p>
-      </a>
+        <ul class="text-sm text-gray-600 list-disc list-inside mt-2">
+          <li>Progress monitoring</li>
+          <li>Vendor & stakeholder coordination</li>
+          <li>Time & cost control</li>
+        </ul>
+        <a href="project-management.html" class="text-blue-600 text-sm font-semibold mt-3 inline-block hover:underline">Learn More →</a>
+      </article>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mt-16">
+      <p class="text-lg mb-4">Need a custom solution for your project?</p>
+      <a href="contact.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition">Request a Quote</a>
     </div>
   </main>
 
@@ -97,12 +107,10 @@
     <p>&copy; 2025 L&S Engineering Services. All Rights Reserved.</p>
   </footer>
 
-  <!-- Floating Contact Button -->
   <a href="contact.html" class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition text-sm font-semibold">
     Contact
   </a>
 
-  <!-- JS: Mobile Menu Toggle -->
   <script>
     const toggleBtn = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
